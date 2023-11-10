@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
     <title>Покраска автомобилей в Минске</title>
-    <link type="text/css" href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
 </head>
+
 <body>
     <header>
         <div class="header-container">
@@ -29,44 +34,44 @@
             <li>Обновление старых автомобилей: Покраска может сделать старые автомобили более современными и привлекательными.</li>
         </ul>
 
-        <p>Владельцы автомобилей обращаются к нам для профессиональной покраски в Минске. Мы предоставляем высококачественные услуги, учитывая ваши потребности. Свяжитесь с нами, чтобы узнать больше о ценах и условиях покраски.</p>
+        <p>Владельцы автомобилей обращаются к нам для профессиональной покраски в Минске...</p>
         <p>Телефон: +375293203929</p>
     </main>
 
-    <section id="advertisement">
-    <h2>Лучший сервис по покраске автомобилей в Минске!</h2>
-    <p>Превосходное качество и индивидуальный подход - вот что делает наш сервис непревзойденным в мире покраски автомобилей!</p>
-    <p>Наши профессиональные художники-автомаляры работают с любыми цветами и оттенками, чтобы сделать ваш автомобиль уникальным произведением искусства.</p>
-    <p>Мы гарантируем:</p>
-    <ul>
-        <li>Высочайшее качество покраски с использованием лучших материалов</li>
-        <li>Индивидуальный подход к каждому клиенту</li>
-        <li>Быстрое и профессиональное выполнение работ</li>
-        <li>Гарантированное удовлетворение и восхищенные взгляды окружающих!</li>
-    </ul>
-    <p>Не упустите возможность сделать ваш автомобиль визитной карточкой стиля и качества. Закажите покраску прямо сейчас!</p>
-    <button onclick="location.href='#contact'">Оформить заказ</button>
-</section>
+    <section>
+        <h2>Лучший сервис по покраске автомобилей в Минске!</h2>
+        <p>Превосходное качество и индивидуальный подход - вот что делает наш сервис непревзойденным в мире покраски автомобилей!</p>
+        <p>Наши профессиональные художники-автомаляры работают с любыми цветами и оттенками, чтобы сделать ваш автомобиль уникальным произведением искусства.</p>
+        <p>Мы гарантируем:</p>
+        <ul>
+            <li>Высочайшее качество покраски с использованием лучших материалов</li>
+            <li>Индивидуальный подход к каждому клиенту</li>
+            <li>Быстрое и профессиональное выполнение работ</li>
+            <li>Гарантированное удовлетворение и восхищенные взгляды окружающих!</li>
+        </ul>
+        <p>Не упустите возможность сделать ваш автомобиль визитной карточкой стиля и качества. Закажите покраску прямо сейчас!</p>
+        <button onclick="location.href='#contact'">Заказать звонок</button>
+    </section>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Заказать звонок</h2>
+            <form method="POST" action="/">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="phone">Номер телефона:</label>
+                <input type="text" id="phone" name="phone" required>
+                <br>
+                <input type="submit" value="Заказать звонок">
+            </form>
+            <h3>Контакты:</h3>
+            <p>Адрес: Минск, Озерцо</p>
+            <p>Телефон: +375293203929</p>
+        </div>
+    </div>
 
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Заказать звонок</h2>
-  <form method="POST" action="/">
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="phone">Номер телефона:</label>
-            <input type="text" id="phone" name="phone" required>
-            <br>
-            <input type="submit" value="Заказать звонок">
-        </form>
-    <h3>Контакты:</h3>
-    <p>Адрес: Минск, Озерцо</p>
-    <p>Телефон: +375293203929</p>
-  </div>
-</div>
     <section id="contact">
         <h2>Контакты:</h2>
         <p>Адрес: Минск, Озерцо</p>
@@ -78,13 +83,14 @@
             <p>&copy; 2023 Покраска автомобилей в Минске</p>
         </div>
     </footer>
+
     <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
-<div id="myModals" class="modal">
-  <div class="modal-content">
-    <span class="close" id="closeModal">&times;</span>
-    <h2>Запрос на звонок отправлен!</h2>
-    <p>Мы свяжемся с вами в ближайшее время.</p>
-  </div>
-</div>
+    <div id="myModals" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Запрос на звонок отправлен!</h2>
+            <p>Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+    </div>
 </body>
 </html>
