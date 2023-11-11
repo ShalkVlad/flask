@@ -24,10 +24,14 @@ window.onclick = function(event) {
   }
 }
 
-// Добавьте обработчик события для кнопки "Контакты"
+// Добавьте обработчики событий для кнопки "Контакты"
 var contactBtn = document.querySelector("nav ul li a[href='#contact']");
 if (contactBtn) {
   contactBtn.addEventListener("click", openModal);
 }
 
-
+// Добавьте обработчик события для кнопки "Заказать звонок"
+var callBtn = document.querySelector("button");
+if (callBtn) {
+  callBtn.addEventListener("click", openModal);
+}
